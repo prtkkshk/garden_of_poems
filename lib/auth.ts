@@ -1,5 +1,5 @@
 const ADMIN_KEY = 'cg_admin'
-const CORRECT_PASSWORD = 'ady_pepper$25'
+const CORRECT_PASSWORD = process.env.NEXT_PUBLIC_ADMIN_PASSWORD || 'ady_pepper$25'
 
 export function checkPassword(password: string): boolean {
   return password === CORRECT_PASSWORD
